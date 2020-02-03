@@ -42,17 +42,21 @@
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.8.4",
     "@babel/runtime": "^7.6.2",
     "@react-native-community/eslint-config": "^0.0.5",
     "babel-jest": "^24.9.0",
     "eslint": "^6.5.1",
     "eslint-plugin-prettier": "^3.1.1",
+    "expect": "^25.1.0",
+    "fetch-mock": "^9.0.0-beta.2",
     "husky": "^3.1.0",
     "jest": "^24.9.0",
     "lint-staged": "^9.5.0",
     "metro-react-native-babel-preset": "^0.56.0",
     "prettier": "^1.19.1",
-    "react-test-renderer": "16.9.0"
+    "react-test-renderer": "16.9.0",
+    "redux-mock-store": "^1.5.4"
   },
   "husky": {
     "hooks": {
@@ -68,6 +72,11 @@
   },
   "jest": {
     "preset": "react-native",
-    "testRegex": "src/.*.spec.(js|jsx)$"
+    "testRegex": "src/.*.spec.(js|jsx)$",
+    "modulePaths": [
+      "<rootDir>",
+      "node_modules"
+    ],
+    "moduleDirectories": ["node_modules", "bower_components", "src"]
   }
 }
